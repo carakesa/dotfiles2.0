@@ -59,8 +59,8 @@ alt + F2
 	rofi_runner
 
 # Rofi Menus/Applets
-super + {m,n,r,s,w,p}
-	{rofi_music,nmd,rofi_asroot,rofi_screenshot,rofi_windows,rofi_powermenu}
+super + {b,m,n,r,s,w,p}
+	{rofi_bluetooth,rofi_music,nmd,rofi_asroot,rofi_screenshot,rofi_windows,rofi_powermenu}
 
 ctrl + alt + t
   rofi_themes
@@ -73,7 +73,7 @@ super + {f,e}
 
 # Terminal Apps
 hyper + {r,h,b}
-	xfce4-terminal -e {ranger,htop,btop}
+	tilix -e {ranger,htop,btop}
 
 # Color Picker
 #super + p
@@ -85,7 +85,7 @@ ctrl + alt + m
 
 # Lockscreen
 ctrl + alt + l
-   betterlockscreen --lock
+.   betterlockscreen --lock
 
 ##---------- System Keys ----------##
 
