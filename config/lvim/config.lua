@@ -18,10 +18,10 @@ vim.opt.shell = "/bin/sh"
 -- general
 lvim.log.level = "warn"
 lvim.format_on_save = true
-lvim.colorscheme = "torte"
+-- lvim.colorscheme = "torte"
 -- to disable icons and use a minimalist setup, uncomment the following
--- lvim.use_icons = false
-
+lvim.use_icons = true
+colorscheme = "wal"
 -- keymappings [view all the defaults by pressing <leader>Lk]
 lvim.leader = "space"
 -- add your own keymapping
