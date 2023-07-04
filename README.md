@@ -1,5 +1,17 @@
  # Dotfiles 2.0
 
+## WIP:
+
+Mpris-playerctl-tail 
+    parer errors - may be a result of python gi
+    
+4 July 23 @ 1418 EST
+    create venv @ ~/.local/share/python-venv/*
+    installed pip gpi
+    still failing!
+
+
+
 Attempting a cleaner/nicer and less convoluted selection.
 
 Still managed via RCM (rcup, rcdn)
@@ -18,6 +30,9 @@ Still managed via RCM (rcup, rcdn)
     - rofi
     - polybar
     - picom
+
+* playerctl
+
 * Wal 
     - More eye candy to play with everythign else (WIP)
 * mpris
