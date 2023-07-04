@@ -21,9 +21,9 @@ function clock
   peaclock --config-dir ~/.config/peaclock/ $argv
 end
 
-function z
-  zathura $argv & disown
-end
+#function z
+#  zathura $argv & disown
+#end
 
 # Clean unzip: Creates a top level folder if a zip file doesn't have one
 # This prevents the directory from being cluttered with unzipped files
