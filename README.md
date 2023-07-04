@@ -20,6 +20,10 @@ Still managed via RCM (rcup, rcdn)
     - picom
 * Wal 
     - More eye candy to play with everythign else (WIP)
+* mpris
+* slimpris (optional, for Logitech Media Server integrations)
+* zscroll (for polybar mpris)
+
 
 * redshift
 * lunarvim
@@ -49,10 +53,14 @@ These should be fairly system agnostic, however the base is (currently) created 
     * bspwm 
         sxhkdrc
         picom.conf
+        polybar
     * lvim
         config.lua
     * redshift.conf
-    
+      Polybar
+        scripts
+            mpris redshift
+            
 * extras
     xorg.conf.d/
         90-touchpad.conf  (reference - setup natural scroll)
