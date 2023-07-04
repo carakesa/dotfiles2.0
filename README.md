@@ -70,4 +70,6 @@ These should be fairly system agnostic, however the base is (currently) created 
         chargelimit.sh
         nochargelimit.sh
 
-
+## Workflow
+* Added fisher, fzf, puffer fish, sponge to Fish
+* 
