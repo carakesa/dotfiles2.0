@@ -1,0 +1,52 @@
+
+
+# Alias for vi/vim/nvim/spacevim by calling utility script.
+        alias v="~/.dotfiles/util/vicheck.sh"
+        alias vi="~/.dotfiles/util/vicheck.sh"
+        alias vim="~/.dotfiles/util/vicheck.sh"
+
+# exa as ls
+        alias l='exa'
+	alias ls='exa'
+	alias la='exa -a'
+	alias ll='exa -l'
+	alias lla='exa -la'
+# Greps
+	alias grep='grep --colour=auto'
+	alias egrep='egrep --colour=auto'
+	alias fgrep='fgrep --colour=auto'
+# colorize grep and ls
+        alias grep &> /dev/null || alias grep="grep --color=auto"
+
+# colorized ls - handy if exa not installed
+#	alias l='ls -p --color=auto -w $(($COLUMNS<120?$COLUMNS:120))'
+#	alias ll='ls -lp --color=auto'
+#	alias la='ls -ap --color=auto -w $((COLUMNS<120?$COLUMNS:120))'
+# Interactive move/copy/paste 
+	alias cp="cp -v -i"
+	alias mv="mv -v -i"
+	alias rm="rm -v -i"
+#       bat
+	alias cat="bat"
+# Pacman Aliases
+	alias paclean="sudo pacman -Qtdq | sudo pacman -Rns -"
+  alias cleanup_pacman='set -x; sudo pacman -Rs $(pacman -Qdtq))'
+	alias pac-showorphans="pacman -Qqd | pacman -Rsu --print -"
+# so much easier to type than `cd ..`
+	alias cdd="cd .."
+	alias cddd="cd ../.."
+	alias cdddd="cd ../../.."
+        alias cddddd="cd ../../../.."
+	alias dfhh="du -h -d1 | sort -hr"
+
+# Take out the Trash
+        alias vtrash="gio list trash://"
+        alias emptytrash="gio trash --empty"
+
+# Memory stuffs
+alias df='df -h'                          # human-readable sizes
+alias free='free -m'                      # show sizes in MB
+
+# Stuff I never use...
+alias np='nano -w PKGBUILD'
+alias more=less

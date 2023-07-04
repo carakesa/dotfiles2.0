@@ -1,0 +1,13 @@
+# This line swaps caps & left control  
+setxkbmap -layout "us" -option "ctrl:swapcaps"
+
+## and this loads a keyboard map so we can make use of Print_Screen wedged between Control_R and Alt_R
+## Seriously Lenovo, wtf....
+#xmodmap ~/.xmodmap
+
+### Now use xcape to make caps act as esc when pressed and Control_L when held
+xcape -e -t 150 'Control_L=Escape'
+
+#### and xcape lets Print act as Print when we don't need it to be Hyper.
+#### Make sure you don't have Print taking screen shots unless used with another modifier!  I'm using sxhkdrc
+#xcape -e -t 150 'Hyper_L=Print'
