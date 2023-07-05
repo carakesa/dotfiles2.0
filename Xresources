@@ -12,7 +12,8 @@ alert = ${xrdb:color3:#222}
 [bar/bar]
 background = ${colors.background}
 foreground = ${colors.foreground}
-
+fg = ${xrdb:color1}
+bg = ${xrdb:color2}
 
 
 cursor.size: 16
