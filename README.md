@@ -2,6 +2,9 @@
 
 ## WIP:
 
+4 July 23 @ 2336EST
+Compling 'gotroller' as a possible gui (rofi-like?) polybar module that builds off of mpris/playerctl things
+
 Mpris-playerctl-tail 
     parer errors - may be a result of python gi
     
