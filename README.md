@@ -7,6 +7,7 @@ edit of ~/.config/bspwm/themes/default/polybar/colors.ini
     Note that the defualt bluetooth module for polybar throws an error for the foreground color.  Must investigate further!
 
 
+
 4 July 23 @ 2336EST
 mpris stuffs:  
   * mpris polybar playerctl modules -- *most* don't have native GUI/rofi support.  (ie. Mpris-playerctl-tail)
@@ -59,6 +60,8 @@ Still managed via RCM (rcup, rcdn)
     - requires neovim first!
 * xcape
     - supplements the keyboard layouts
+* python-pywalfox
+
 
 
 ## Assumptions:
