@@ -7,8 +7,10 @@
 ## Import files (Colors, Fonts, Etc)
 import:
   # - ~/.config/bspwm/alacritty/colors.yml
-   - ~/.cache/wal/alacrittycolors.yml   ### New as of 16Mar23.  Used for Wal.
+  # - ~/.cache/wal/alacrittycolors.yml   ### New as of 16Mar23.  Used for Wal.
    - ~/.config/bspwm/alacritty/fonts.yml
+   - ~/.config/wal/templates/alacrittycolors.yml
+
 shell:
     program: /bin/tmux
 
