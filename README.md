@@ -84,16 +84,19 @@ These should be fairly system agnostic, however the base is (currently) created 
       Polybar
         scripts
             mpris redshift
-            
-* extras
-    xorg.conf.d/
-        90-touchpad.conf  (reference - setup natural scroll)
-
 * local/bin/
     vicheck.sh
     pipes.sh
     fzf.bash
     colors.sh
+            
+### extras
+These are more system configs than user files.  Assume /etc unless otherwise stated.
+    xorg.conf.d/
+        90-touchpad.conf  (reference - setup natural scroll)
+    thinkfan-configs
+        sudo cp thinkfan.conf /etc/thinkfan.conf #fan curves
+        sudo cp modprobe-thinkfan.conf /etc/modprobe.d/thinkfan.conf #module with flags enabled
 
 ### Host Specific
 * host-Yoga
