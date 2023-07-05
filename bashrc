@@ -18,10 +18,7 @@ wal-tile() {
 # ---- Call External Files ----- *
 # Aliases from ~/.aliases
 
-if [ -f ~/.aliases ]; then
-    . ~/.aliases
-fi
-
+[ -f .aliases ] && source .aliases
 /usr/bin/setxkbmap -option "ctrl:swapcaps"
 
 # If not running interactively, do not do anything
