@@ -3,10 +3,16 @@
 ## WIP:
 
 4 July 23 @ 2336EST
-Compling 'gotroller' as a possible gui (rofi-like?) polybar module that builds off of mpris/playerctl things
+mpris stuffs:  
+  * mpris polybar playerctl modules -- *most* don't have native GUI/rofi support.  (ie. Mpris-playerctl-tail)
+  * Gotroller -- has a gui, but throws a panic.  opened github issue about int/uint panic.
 
-Mpris-playerctl-tail 
-    parer errors - may be a result of python gi
+wal
+  * Previous configs used the Xresources file.
+  * Xresources was storing values from Wal for access by other programs (ie. Polybar, alacritty)
+        How the heck did I have that setup?
+
+
     
 4 July 23 @ 1418 EST
     create venv @ ~/.local/share/python-venv/*
