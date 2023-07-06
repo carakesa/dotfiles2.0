@@ -2,6 +2,10 @@
 
 ## WIP:
 
+6 July 23 @ 0127
+attempt to add obsidian.nvim to LunarVim config -- throws errors about handlers....Look at later
+
+
 5 July 23 @ 1640
 edit of ~/.config/bspwm/themes/default/polybar/colors.ini
     Note that the defualt bluetooth module for polybar throws an error for the foreground color.  Must investigate further!
