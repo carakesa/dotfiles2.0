@@ -181,8 +181,11 @@ lvim.plugins = {
     "nvim-lualine/lualine.nvim",
     dependencies = { 'nvim-tree/nvim-web-devicons', opt = true },
   },
-
-  --  { "LunarVim/tokyonight.nvim" },
+  { "nvim-lua/plenary.nvim" },
+  { "hrsh7th/nvim-cmp" },
+  { "nvim-telescope/telescope.nvim" },
+  { "godlygeek/tabular" },
+  { "preservim/vim-markdown" },
   {
     "folke/trouble.nvim",
     cmd = "TroubleToggle",
@@ -193,8 +196,8 @@ lvim.plugins = {
   },
   {
     "epwalsh/obsidian.nvim",
-    lazy = true,
-    event = { "/backups/github/carakesa/Personal-Notes/**.md" },
+    lazy = false,
+    event = "/backups/github/carakesa/Personal-Notes/**.md",
     dependencies = {
       "nvim-lua/plenary.nvim",
       -- Optional, for completion.
