@@ -62,8 +62,9 @@ lvim.builtin.terminal.open_mapping = "<c-t>"
 --   w = { "<cmd>Trouble workspace_diagnostics<cr>", "Workspace Diagnostics" },
 -- }
 
-lvim.builtin.lualine.options.theme = "gruvbox"
+-- lvim.builtin.lualine.options.theme = "gruvbox"
 
+lvim.builtin.lualine.options.theme = "auto"
 -- TODO: User Config for predefined plugins
 -- After changing plugin config exit and reopen LunarVim, Run :PackerInstall :PackerCompile
 lvim.builtin.alpha.active = true
@@ -98,10 +99,10 @@ lvim.builtin.treesitter.highlight.enabled = true
 -- generic LSP settings
 
 -- -- make sure server will always be installed even if the server is in skipped_servers list
--- lvim.lsp.installer.setup.ensure_installed = {
---     "sumeko_lua",
---     "jsonls",
--- }
+lvim.lsp.installer.setup.ensure_installed = {
+  --  "sumeko_lua",
+  "jsonls",
+}
 -- -- change UI setting of `LspInstallInfo`
 -- -- see <https://github.com/williamboman/nvim-lsp-installer#default-configuration>
 -- lvim.lsp.installer.setup.ui.check_outdated_servers_on_open = false
@@ -112,7 +113,7 @@ lvim.builtin.treesitter.highlight.enabled = true
 -- }
 
 -- ---@usage disable automatic installation of servers
--- lvim.lsp.installer.setup.automatic_installation = false
+lvim.lsp.installer.setup.automatic_installation = true
 
 -- ---configure a server manually. !!Requires `:LvimCacheReset` to take effect!!
 -- ---see the full default list `:lua print(vim.inspect(lvim.lsp.automatic_configuration.skipped_servers))`
@@ -128,13 +129,13 @@ lvim.builtin.treesitter.highlight.enabled = true
 
 -- -- you can set a custom on_attach function that will be used for all the language servers
 -- -- See <https://github.com/neovim/nvim-lspconfig#keybindings-and-completion>
--- lvim.lsp.on_attach_callback = function(client, bufnr)
---   local function buf_set_option(...)
---     vim.api.nvim_buf_set_option(bufnr, ...)
---   end
---   --Enable completion triggered by <c-x><c-o>
---   buf_set_option("omnifunc", "v:lua.vim.lsp.omnifunc")
--- end
+lvim.lsp.on_attach_callback = function(client, bufnr)
+  local function buf_set_option(...)
+    vim.api.nvim_buf_set_option(bufnr, ...)
+  end
+  --   --Enable completion triggered by <c-x><c-o>
+  buf_set_option("omnifunc", "v:lua.vim.lsp.omnifunc")
+end
 
 -- -- set a formatter, this will override the language server formatting capabilities (if it exists)
 -- local formatters = require "lvim.lsp.null-ls.formatters"
@@ -153,22 +154,23 @@ lvim.builtin.treesitter.highlight.enabled = true
 -- }
 
 -- -- set additional linters
--- local linters = require "lvim.lsp.null-ls.linters"
--- linters.setup {
---   { command = "flake8", filetypes = { "python" } },
---   {
---     -- each linter accepts a list of options identical to https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/BUILTINS.md#Configuration
---     command = "shellcheck",
---     ---@usage arguments to pass to the formatter
---     -- these cannot contain whitespaces, options such as `--line-width 80` become either `{'--line-width', '80'}` or `{'--line-width=80'}`
---     extra_args = { "--severity", "warning" },
---   },
---   {
---     command = "codespell",
---     ---@usage specify which filetypes to enable. By default a providers will attach to all the filetypes it supports.
---     filetypes = { "javascript", "python" },
---   },
--- }
+local linters = require "lvim.lsp.null-ls.linters"
+linters.setup {
+  { command = "flake8",    filetypes = { "python" } },
+  --   {
+  --     -- each linter accepts a list of options identical to https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/BUILTINS.md#Configuration
+  --     command = "shellcheck",
+  --     ---@usage arguments to pass to the formatter
+  --     -- these cannot contain whitespaces, options such as `--line-width 80` become either `{'--line-width', '80'}` or `{'--line-width=80'}`
+  --     extra_args = { "--severity", "warning" },
+  { command = "codespell", filetypes = { "javascript", "python" } },
+  --   --     ---@usage specify which filetypes to enable. By default a providers will attach to all the filetypes it supports.
+  --   filetypes = { "javascript", "python" },
+  { command = "Marksman",  filetypes = { "markdown" } },
+
+  require("lvim.lsp.manager").setup("graphql", graphql_lsp_opts),
+  require("lvim.lsp.manager").setup("marksman") }
+
 
 -- Additional Plugins
 lvim.plugins = {
@@ -181,8 +183,14 @@ lvim.plugins = {
     "nvim-lualine/lualine.nvim",
     dependencies = { 'nvim-tree/nvim-web-devicons', opt = true },
   },
-  { "nvim-lua/plenary.nvim" },
+  { "neovim/nvim-lspconfig" },
+  { "hrsh7th/cmp-nvim-lsp" },
+  { "hrsh7th/cmp-buffer" },
+  { "hrsh7th/cmp-path" },
+  { "hrsh7th/cmp-cmdline" },
   { "hrsh7th/nvim-cmp" },
+  { "artempyanykh/marksman" },
+  { "nvim-lua/plenary.nvim" },
   { "nvim-telescope/telescope.nvim" },
   { "godlygeek/tabular" },
   { "preservim/vim-markdown" },
@@ -196,14 +204,19 @@ lvim.plugins = {
   },
   {
     "epwalsh/obsidian.nvim",
-    lazy = false,
-    event = "/backups/github/carakesa/Personal-Notes/**.md",
+    lazy = true,
+    --    event = { "BufRead /backups/github/carakesa/Personal-Notes/**.md" },
+    event = { "BufRead, BufNewFile ./*.md set filetype=markdown" },
+    -- If you want to use the home shortcut '~' here you need to call 'vim.fn.expand':
+    -- event = { "BufReadPre " .. vim.fn.expand "~" .. "/my-vault/**.md" },
     dependencies = {
+      -- Required.
       "nvim-lua/plenary.nvim",
       -- Optional, for completion.
       "hrsh7th/nvim-cmp",
       -- Optional, for search and quick-switch functionality.
       "nvim-telescope/telescope.nvim",
+
       -- Optional, an alternative to telescope for search and quick-switch functionality.
       -- "ibhagwan/fzf-lua"
 
@@ -216,10 +229,10 @@ lvim.plugins = {
       "preservim/vim-markdown",
     },
     opts = {
-      dir = "/backups/github/carakesa/Personal-Notes", -- no need to call 'vim.fn.expand' here
+      dir = "/backups/github/carakesa/Personal-Notes/", -- no need to call 'vim.fn.expand' here
 
       -- Optional, if you keep notes in a specific subdirectory of your vault.
-      -- notes_subdir = "notes",
+      --notes_subdir = "notes",
 
       -- Optional, set the log level for Obsidian. This is an integer corresponding to one of the log
       -- levels defined by "vim.log.levels.*" or nil, which is equivalent to DEBUG (1).
@@ -237,7 +250,7 @@ lvim.plugins = {
         -- If using nvim-cmp, otherwise set to false
         nvim_cmp = true,
         -- Trigger completion at 2 chars
-        min_chars = 3,
+        min_chars = 2,
         -- Where to put new notes created from completion. Valid options are
         --  * "current_dir" - put new notes in same directory as the current buffer.
         --  * "notes_subdir" - put new notes in the default notes subdirectory.
@@ -290,13 +303,13 @@ lvim.plugins = {
       -- URL it will be ignored but you can customize this behavior here.
       follow_url_func = function(url)
         -- Open the URL in the default web browser.
-        -- vim.fn.jobstart({"open", url})  -- Mac OS
+        -- vim.fn.jobstart({ "open", url }) -- Mac OS
         vim.fn.jobstart({ "xdg-open", url }) -- linux
       end,
 
       -- Optional, set to true if you use the Obsidian Advanced URI plugin.
       -- https://github.com/Vinzent03/obsidian-advanced-uri
-      use_advanced_uri = false,
+      use_advanced_uri = true,
 
       -- Optional, set to true to force ':ObsidianOpen' to bring the app to the foreground.
       open_app_foreground = false,
@@ -322,8 +335,7 @@ lvim.plugins = {
         end
       end, { noremap = false, expr = true })
     end,
-  },
-
+  }
 }
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)
 -- vim.api.nvim_create_autocmd("BufEnter", {
