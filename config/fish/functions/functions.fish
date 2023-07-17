@@ -1,4 +1,5 @@
-###  New as of 16 Mar 2023
+###  17 July 2023 Update
+#    Move Go/Ruby/Cargo files into Programs/{type} path
 #    Also taken from github.com/GideonWolfe/dots
 #    Functions look really useful
 

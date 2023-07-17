@@ -1,9 +1,6 @@
-# 16 March 2023 Updates
+# 17 July 2023 Updates
+# modify for Legion, fix paths
 # Attempt to tie in Pywal with Fish thanks to "GideonWolfe/dots"
-
-#Source wal colors; still testing
-# cat ~/.cache/wal/sequences
-
 
 if status is-interactive
   # Commands to run in interactive sessions can go here
@@ -31,12 +28,15 @@ set XDG_CACHE_HOME "$HOME/.cache"
 set XDG_CONFIG_HOME "$HOME/.config"
 
 # Other applications
-set CARGO_HOME "$XDG_DATA_HOME/cargo" #rust
-set GEM_PATH "$XDG_DATA_HOME/ruby/gems" #ruby
-set GEM_HOME "$XDG_DATA_HOME/gem"
-set GEM_SPEC_CACHE "$XDG_CACHE_HOME/gem"
+	# Will it keep /home cleaner?
+set CARGO_HOME "$XDG_DATA_HOME/Programs/cargo" #rust
+set GEM_PATH "$XDG_DATA_HOME/Programs/ruby/gems" #ruby
+set GEM_HOME "$XDG_DATA_HOME/Programs/gem"
+set GEM_SPEC_CACHE "$XDG_CACHE_HOME/Programs/gem"
+set GOPATH "$XDG_DATA_HOME/Programs/go"
 
- # _____                                 
+
+# _____                                 
 # |  ___|                                
 # | |__ _ ____   __ __   ____ _ _ __ ___ 
 # |  __| '_ \ \ / / \ \ / / _` | '__/ __|
@@ -55,17 +55,15 @@ set PYTHONDONTWRITEBYTECODE 'yes' # Prevent creation of __pycache__ folders
 set COLOR1 (xrdb -query | grep "color1" | cut -f 2 | tail -1)
 
 
-
-
-
 ##### Nothing New after this line #####
 
 
   alias q=exit
 # Alias for vi/vim/nvim/spacevim by calling utility script.
-        alias v="~/.dotfiles/util/vicheck.sh"
-        alias vi="~/.dotfiles/util/vicheck.sh"
-        alias vim="~/.dotfiles/util/vicheck.sh"
+        alias v="~/.dotfiles/utils/vicheck.sh"
+        alias vi="~/.dotfiles/utils/vicheck.sh"
+        alias vim="~/.dotfiles/utils/vicheck.sh"
+        alias lvim="~/.local/bin/lvim"
 
   #wal -i "$wallpaper_path"
   #bat ~/.cache/wal/schemes &
