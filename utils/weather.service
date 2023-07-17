@@ -1,0 +1,14 @@
+[Unit]
+Description=Weather updater
+PartOf=graphical-session.target
+
+[Service]
+# Get one from https://openweathermap.org/, it's free
+Environment=OWM_API_KEY=325913bc9dfe481174dcf5410f77193f
+ExecStart=/usr/bin/mkdir -p %t/i3
+ExecStart=%h/.config/i3/bin/weather
+Type=oneshot
+RemainAfterExit=false
+Restart=on-failure
+RestartSec=3s
+
