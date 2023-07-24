@@ -1,5 +1,18 @@
  # Dotfiles 2.0
 
+## Unrelated (23 July 23) 
+
+**Note 1**
+
+Disabled os-prober in /etc/default/grub and set the grub timer to 0.
+Then used efibootmgr to remove the windows boot entry before running 'update-grub'
+
+For those not in the know, it now 'looks' like Windows is gone, unless they read this note!
+
+** Note 2 ** I started playing with LazyVIM.   Kinda nifty.  I still prefer lunarvim, but LazyVIM may have it's place as well --- particularly for the Obsidian.nvim plugin that I can't seem to get working in LVIM.
+
+
+
 ## WIP:
 
 6 July 23 @ 0127
