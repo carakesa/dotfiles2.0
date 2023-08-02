@@ -37,7 +37,7 @@ function clean-unzip --argument zipfile
     if is-clean-zip $zipfile
         unzip $zipfile
     else
-        set zipname (echo $zipfile | trim-right '.zip')
+        set zipname (echo $zipfile | string trim -c .zip)
         mkdir $zipname || return 1
         unzip $zipfile -d $zipname
     end
@@ -46,7 +46,7 @@ end
 #### Might be useful, but I'll probably forget -- s.
 # unzip-cd utilizes clean-unzip to unzip and cd into a zip file
 function unzip-cd --argument zipfile
-    clean-unzip $zipfile && cd (echo $zipfile | trim-right .zip)
+    clean-unzip $zipfile && cd (echo $zipfile | string trim -c .zip)
 end
 
 #### some grep enhancements
@@ -76,6 +76,10 @@ end
 
 function lla
   exa -la $argv
+end
+
+function lo
+  nnn -de
 end
 
 function cp

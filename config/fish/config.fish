@@ -2,6 +2,9 @@
 # modify for Legion, fix paths
 # Attempt to tie in Pywal with Fish thanks to "GideonWolfe/dots"
 
+
+
+##### Rice-Rice Baby! (wal colors and sourcing)   ####### 
 if status is-interactive
   # Commands to run in interactive sessions can go here
     /usr/bin/cat ~/.cache/wal/sequences &
@@ -9,7 +12,12 @@ if status is-interactive
 set COLOR1 (xrdb -query | grep "color1" | cut -f 2 | tail -1)
 
 source ~/.cache/wal/fzf.fish
+
+
+####  SOURCE OTHER FILES #####
+
 source ~/.config/fish/functions/functions.fish
+source ~/.config/fish/completions/nnn.fish
 
 #   ____             __ _
 #  / ___|___  _ __  / _(_) __ _
@@ -50,24 +58,38 @@ set QT_STYLE_OVERRIDE 'gtk2'
 set EDITOR lvim
 set PYTHONDONTWRITEBYTECODE 'yes' # Prevent creation of __pycache__ folders
 
-
-
 set COLOR1 (xrdb -query | grep "color1" | cut -f 2 | tail -1)
 
 
-##### Nothing New after this line #####
+
+### SET MANPAGER
+### Uncomment only one of these!
+
+### "bat" as manpager
+set -x MANPAGER "sh -c 'col -bx | bat -l man -p'"
+
+### "vim" as manpager
+# set -x MANPAGER '/bin/bash -c "vim -MRn -c \"set buftype=nofile showtabline=0 ft=man ts=8 nomod nolist norelativenumber nonu noma\" -c \"normal L\" -c \"nmap q :qa<CR>\"</dev/tty <(col -b)"'
+
+### "nvim" as manpager
+# set -x MANPAGER "nvim -c 'set ft=man' -"
+
+### "less" as manpager
+# set -x MANPAGER "less"
 
 
-  alias q=exit
+
+
+
+
+
+
+        alias q=exit
 # Alias for vi/vim/nvim/spacevim by calling utility script.
         alias v="~/.dotfiles/utils/vicheck.sh"
         alias vi="~/.dotfiles/utils/vicheck.sh"
         alias vim="~/.dotfiles/utils/vicheck.sh"
         alias lvim="~/.local/bin/lvim"
-
-  #wal -i "$wallpaper_path"
-  #bat ~/.cache/wal/schemes &
-
 # exa as ls
         alias l='exa'
 	alias ls='exa'
