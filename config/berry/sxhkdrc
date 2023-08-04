@@ -12,12 +12,12 @@ super + Return
 
 
 # Terminal, Float xfce4-terminal
-super + shift + Return
-  xfce4-terminal --drop-down 
+#super + shift + Return
+#  xfce4-terminal --drop-down 
 
 # Terminal (alacritty)
-hyper + Return
-  bspterm --float
+#hyper + Return
+#  bspterm --float
 
 # Terminal (floating)
 super + t
@@ -134,7 +134,7 @@ super + shift + {1-9}
 super + space
     berryc fullscreen
 
-super + t
+super + shift + t
     berryc toggle_decorations
 
 super + Tab
