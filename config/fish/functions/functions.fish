@@ -110,9 +110,9 @@ function dfh
   du -h -d1 | sort -hr
 end
 
-function q
-  command exit
-end
+#function q
+#  command exit
+#end
 
 
 
