@@ -1,0 +1,91 @@
+#!/usr/bin/env bash
+
+## Copyright (C) 2020-2023 Aditya Shakya <adi1090x@gmail.com>
+##
+## Config file for berry WM
+
+## Berry Configs -----------------------------------------------
+
+# Set decoration geometry
+berryc border_width 0
+berryc inner_border_width 2
+berryc title_height 0
+#berryc top_gap 			82
+berryc edge_gap 82 20 20 20
+
+# Set decoration colors
+berryc focus_color 292D3E
+berryc unfocus_color 292D3E
+berryc inner_focus_color D97E96
+berryc inner_unfocus_color 496886
+berryc text_focus_color FFFFFF
+berryc text_unfocus_color 011826
+
+# Other options
+berryc set_font "Iosevka-10"
+berryc smart_place "true"
+berryc draw_text "true"
+berryc edge_lock "true"
+berryc json_status "true"
+berryc decorate_new "false"
+berryc pointer_interval 0
+berryc manage Dialog | Toolbar | Menu | Splash | Utility
+
+berryc move_mask "mod1"
+berryc move_button 1
+berryc resize_mask "mod4"
+berryc resize_button 3
+
+## Autostart Programs ------------------------------------------
+bash | "$HOME"/.config/berry/scripts/berry_autostart
+
+
+
+### ----- PULLED FROM SCRIPTS/berry_autostart ----- ############
+
+# berry dir
+bdir="$HOME/.config/berry"
+
+# Kill already running process
+_ps=(xsettingsd ksuperkey)
+for _prs in "${_ps[@]}"; do
+	if [[ `pidof ${_prs}` ]]; then
+		killall -9 ${_prs}
+	fi
+done
+
+# Enable Simple X hotkey daemon
+sxhkd -c "$bdir"/sxhkdrc &
+
+# Lauch xsettingsd daemon
+xsettingsd --config="$bdir"/xsettingsd &
+
+# polkit agent
+if [[ ! `pidof xfce-polkit` ]]; then
+	/usr/lib/xfce-polkit/xfce-polkit &
+fi
+
+# Enable power management
+xfce4-power-manager &
+
+# Enable Super Keys For Menu
+exec ksuperkey -e 'Super_L=Alt_L|F1' &
+exec ksuperkey -e 'Super_R=Alt_L|F1' &
+
+# Fix cursor
+xsetroot -cursor_name left_ptr
+
+# Restore wallpaper
+hsetroot -root -cover "$bdir"/theme/wallpaper
+
+# Lauch notification daemon
+"$bdir"/scripts/berry_dunst
+
+# Lauch polybar
+"$bdir"/scripts/berry_bar
+
+# Lauch compositor
+"$bdir"/scripts/berry_comp
+
+# Start mpd
+exec mpd &
