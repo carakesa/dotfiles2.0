@@ -67,7 +67,7 @@ ctrl + alt + l
 
 # Take a screenshot
 shift + Print
-	bspscreenshot --now
+	~/.config/berry/scripts/berry_screenshot
 	
 # Take screenshot in 5 second
 #alt + Print	

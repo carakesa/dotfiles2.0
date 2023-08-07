@@ -1,0 +1,113 @@
+Hack Rat:
+
+Initial Stats 
+
+IQ:  18  (rolled 14 (+4 comp for MA)
+ME:  12	
+MA:  6
+PS:  8
+PP:  12
+PE:  12
+PB:  9
+Speed:  8
+
+
+(rolled)
+
+12
+12
+9
+
+
+
+
+
+
+Attribs:  IQ 10+, High MA, High PP
+
+OCC Skills
+
+Native Language:  +30
+Math Basic:       +20
+Basic Elect.      +15
+Electronic Counter+15
+TV/Video:         +20
+Computer Ops      +20
+Computer Progra   +20
+Computer Hacking  +15
+Computer Repair   +10
+Cyberjacking      +06
+Streetwise        +12
+Pilot Motorcycle  +10
+Pilot Auto:       +05
+Running
+WP of Choice
+Hand to Hand == Basic (can upgrade)
+
+OCC Related  (2 rouge, 2 comms, 6 other)
+Communications (any) +10
+Domestic (any)
+Electrical (no additional)
+Espionage (Disguise +10; Intelligence +10; Forgery +5)
+Mechanical:  Basic Mechanical and Automotive only
+Medical:  First Aid or Paramedic (+10) [paramedic counts as 2 skills]
+Physical: Any (+5)
+Pilot:  Conventional Ground, Hover, and jet packs. No robot.  Basic combat or aircraft
+Pilot related:  Any
+Rogue: Any +5
+Science:  Any +5
+Technical: Any +10
+WP (any except Heavy, leans towards concealables)
+
+Secondary Skills:  pick 5 from above (no physical, base level)
+
+[stuff]
+
+Alignment:
+
+
+
+Core attribs
+Stats
+Skills
+equipment
+
+
+I.  Names and Stuff
+
+
+II.  8 Attributes (core stats)
+	a)  IQ  (14 = 140 IQ, 10 = 100IQ, etc)
+	b)  ME  Mental Endurance (
+	c)  Mental Affinity (charisma)
+	d)  Physical Str
+	e)  Physical Prowess (Dex)
+	f)  Phys Endurance (Con)
+	g)  Physical Beauty (appearance)
+	h)  Speed (how many feet per sec.  10 = 10fps, 15=15fps, etc).
+
+16-18 are "exceptional" 
+
+scores = nominally 3d6 (check w/ GM)
+
+
+	
+
+MALVOREN!
+
+Spinne
+
+Rifts:
+
+Races:  Ogre (techno?), Orc (Bionic?), Dwarf (???), Quorian ???, 
+
+Canine (subtypes?)
+
+Simvan Monster Rider: “Another alien menace from the Calgary rift is the Simvan
+Monster Riders. The Simvan are a race of intelligent humanoid cannibals. . . . The culture is not unlike most nomadic societies: the men are the builders, hunters and protectors while the women are the homemakers, bearing and raising children, preparing food, making clothes, etc. The women are also the healers and possess natural psionic healing abilities. . . . The Simvan are known as ‘Monster Riders’ because they have an uncanny ability to tame monsters and use them as mounts and beasts of burden. The monsters selected are frequently creatures believed to be untamable, and almost always carnivorous.” (Sourcebook One)
+
+
+Shaydor Spherian RCC: “The shaydor are a gentle, quiet, inquisitive people who fell easy prey to the Splugorth invaders. . . . A race fascinated by other people, they have been attracted to Rifts Earth. They are found on Earth as free adventurers, explorers, minions and slaves of the Splugorth. They are both admired and feared for their psionic powers. Their alien appearance (covered in a hard, shell-like skin with a metallic or crystalline appearance, seven appendages dangling from the round body) only adds to the apprehension of humans and most humanoids.” (Atlantis)
+
+True Bio-Borg RCC: “Whether one calls them ‘Elite,’ ‘True,’ or ‘Full’ Bio-Borgs, all are humanoids who have undergone the process of Bio-Wizard ‘transmutation’ as well as being merged and augmented with symbiotes and other organisms or grafts to transform them into superhuman beings.” (Splynn Dimensional Market)
+
