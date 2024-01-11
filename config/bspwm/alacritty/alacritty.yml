@@ -10,9 +10,6 @@ import:
   # - ~/.config/wal/templates/alacrittycolors.yml   ### New as of 16Mar23.  Used for Wal.
   - ~/.config/bspwm/alacritty/fonts.yml
 
-shell:
-    program: /bin/tmux
-
       ## Set environment variables
 env:
   TERM: alacritty
@@ -33,11 +30,15 @@ window:
   dynamic_title: true
 
 ## scrolling
-  history: 10000
-  multiplier: 3
+  #  history: 10000
+  #multiplier: 3
 
 ## Background opacity
   opacity: 0.4
+
+shell:
+    program: /bin/tmux
+
 
 ## Cursor
 cursor:
