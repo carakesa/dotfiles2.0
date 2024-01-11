@@ -23,11 +23,11 @@ function clock
 end
 
 function newnote --argument file
-    lvim ~/Documents/git-journal/$(date +"%Y-%m-%d-%H-%M-%p").md
+    nvim ~/github/carakesa/Personal-Notes/Daily\ Notes/$(date +"%Y-%m-%d-%H-%M-%p").md
 end
 
 function notes
-    lvim "~/Documents/git-journal/"
+    nvim ~/github/carakesa/Personal-Notes/
 end
 
 #function z
@@ -159,7 +159,7 @@ function extract -d "extract files from archives"
 
     # no arguments, write usage
     if test (count $argv) -eq 0
-        echo "Usage: extract [-option] [file ...]\n Options:\n -r, --remove    Remove archive after unpacking." >&2
+        echo "Usage: extract [-option] [file ...]\n Options:\n -r, --remove Remove archive after unpacking." >&2
         # exit 1 # this closes the terminal...
     end
 
