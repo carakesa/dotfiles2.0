@@ -19,7 +19,15 @@ function restore --argument file
 end
 
 function clock
-  peaclock --config-dir ~/.config/peaclock/ $argv
+    peaclock --config-dir ~/.config/peaclock/ $argv
+end
+
+function newnote --argument file
+    lvim ~/Documents/git-journal/$(date +"%Y-%m-%d-%H-%M-%p").md
+end
+
+function notes
+    lvim "~/Documents/git-journal/"
 end
 
 #function z
@@ -52,62 +60,62 @@ end
 #### some grep enhancements
 # COLOR GREP
 function cgrep
-	grep --color=auto -i $argv
+    grep --color=auto -i $argv
 end
 function lsgrep
-	ls . | cgrep $argv
+    ls . | cgrep $argv
 end
 
 function l
-  exa $argv
+    exa $argv
 end
 
 function ls
-  exa $argv
+    exa $argv
 end
 
 function la
-  exa -a $argv
+    exa -a $argv
 end
 
 function ll
-  exa -l $argv
+    exa -l $argv
 end
 
 function lla
-  exa -la $argv
+    exa -la $argv
 end
 
 function lo
-  nnn -de
+    nnn -de
 end
 
 function cp
-  command cp -v -i $argv
+    command cp -v -i $argv
 end
 
 function mv
-  command mv -v -i $argv
+    command mv -v -i $argv
 end
 
 function rm
-  command rm -v -i $argv  
+    command rm -v -i $argv
 end
 
-function df 
-  command df -h
+function df
+    command df -h
 end
 
 function free
-  command free -m
+    command free -m
 end
 
 function more
-  less
+    less
 end
 
 function dfh
-  du -h -d1 | sort -hr
+    du -h -d1 | sort -hr
 end
 
 #function q
@@ -121,7 +129,7 @@ end
 
 # better journalctl
 function jrnl
-  command journalctl | lnav
+    command journalctl | lnav
 end
 
 # always use base16 theme for bat
@@ -136,11 +144,11 @@ end
 
 # put commit messages in quotes
 function commit
-  command git commit -m "$argv"
+    command git commit -m "$argv"
 end
 
 
- # _____      _                  _   
+# _____      _                  _   
 # | ____|_  _| |_ _ __ __ _  ___| |_ 
 # |  _| \ \/ / __| '__/ _` |/ __| __|
 # | |___ >  <| |_| | | (_| | (__| |_ 
@@ -156,7 +164,7 @@ function extract -d "extract files from archives"
     end
 
     set remove_file 0
-    if test $argv[1] = "-r"; or test $argv[1] = "--remove"
+    if test $argv[1] = -r; or test $argv[1] = --remove
         set remove_file 1
         set --erase argv[1]
     end
@@ -207,4 +215,3 @@ function extract -d "extract files from archives"
         end
     end
 end
-

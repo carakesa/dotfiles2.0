@@ -112,10 +112,10 @@ alt + shift + Print
 # Brighness control
 XF86MonBrightness{Up,Down}
 	bspbrightness{ --inc, --dec}
-	
-# Speaker Volume control
-XF86Audio{RaiseVolume,LowerVolume}
-	bspvolume{ --inc, --dec}
+# 	
+# # Speaker Volume control
+ XF86Audio{RaiseVolume,LowerVolume}
+ 	bspvolume{ --inc, --dec}
 
 # Mic Volume control
 XF86Audio{Mute,MicMute}
