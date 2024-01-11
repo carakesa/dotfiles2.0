@@ -1,28 +1,50 @@
  # Dotfiles 2.0
 
-## Unrelated (23 July 23) 
 
+
+## Unrelated 
+
+**Updates of Previous Notes**   
+
+### 10 Jan 24 
+**Note 1**  
+Enabled Win11 to be seen from the boot loader again.  Kid keeps hogging the laptop now.  :(
+  This negates the 23 July 23 update
+
+**Note 2**
+LazyVIM is still kinda nifty, I think LunarVIM loads faster with my current configs.  I'm alternating depending which configs I want at any given point in time, and both seem usable.
+  Note that the Obsidian Plugin still only seems to be working in LazyVIM.
+
+**Note 3**
+Alternate Gitea site up and running!
+
+#### (23 July 23) 
 **Note 1**
-
 Disabled os-prober in /etc/default/grub and set the grub timer to 0.
 Then used efibootmgr to remove the windows boot entry before running 'update-grub'
 
-For those not in the know, it now 'looks' like Windows is gone, unless they read this note!
+  For those not in the know, it now 'looks' like Windows is gone, unless they read this note!
 
-** Note 2 ** I started playing with LazyVIM.   Kinda nifty.  I still prefer lunarvim, but LazyVIM may have it's place as well --- particularly for the Obsidian.nvim plugin that I can't seem to get working in LVIM.
+**Note 2** 
+I started playing with LazyVIM.   Kinda nifty.  I still prefer lunarvim, but LazyVIM may have it's place as well --- particularly for the Obsidian.nvim plugin that I can't seem to get working in LVIM.
 
 
 
-## WIP:
+## WIP: -- May have been dropped!
 
+10 Jan 24
+**Re: July Notes**
+  Archcraft as an OS overwrites the user configs (it does make backups) and I've not been tracking the changes well...  This impacts Polybar and Wal colorschemes in particular.
+
+  Not been messing with mpris either.
+
+---
 6 July 23 @ 0127
 attempt to add obsidian.nvim to LunarVim config -- throws errors about handlers....Look at later
-
 
 5 July 23 @ 1640
 edit of ~/.config/bspwm/themes/default/polybar/colors.ini
     Note that the defualt bluetooth module for polybar throws an error for the foreground color.  Must investigate further!
-
 
 
 4 July 23 @ 2336EST
