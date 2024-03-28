@@ -6,10 +6,10 @@
 
 ##### Rice-Rice Baby! (wal colors and sourcing)   ####### 
 if status is-interactive
-  # Commands to run in interactive sessions can go here
+    # Commands to run in interactive sessions can go here
     /usr/bin/cat ~/.cache/wal/sequences &
-  end
-set COLOR1 (xrdb -query | grep "color1" | cut -f 2 | tail -1)
+end
+##set COLOR1 (xrdb -query | grep "color1" | cut -f 2 | tail -1)
 
 source ~/.cache/wal/fzf.fish
 
@@ -36,7 +36,7 @@ set XDG_CACHE_HOME "$HOME/.cache"
 set XDG_CONFIG_HOME "$HOME/.config"
 
 # Other applications
-	# Will it keep /home cleaner?
+# Will it keep /home cleaner?
 set CARGO_HOME "$XDG_DATA_HOME/Programs/cargo" #rust
 set GEM_PATH "$XDG_DATA_HOME/Programs/ruby/gems" #ruby
 set GEM_HOME "$XDG_DATA_HOME/Programs/gem"
@@ -51,14 +51,14 @@ set GOPATH "$XDG_DATA_HOME/Programs/go"
 # | |__| | | \ V /   \ V / (_| | |  \__ \
 # \____/_| |_|\_/     \_/ \__,_|_|  |___/
 
-set QT_AUTO_SCREEN_SCALE_FACTOR '0' # fix some QT scaling issues
-set QT_QPA_PLATFORMTHEME 'qt5ct'
-set QT_STYLE_OVERRIDE 'gtk2'
-  #set GOPATH '/home/gideon/Programs/go' # to fix go putting main folder in ~
+set QT_AUTO_SCREEN_SCALE_FACTOR 0 # fix some QT scaling issues
+set QT_QPA_PLATFORMTHEME qt5ct
+set QT_STYLE_OVERRIDE gtk3
+#set GOPATH '/home/gideon/Programs/go' # to fix go putting main folder in ~
 set EDITOR lvim
-set PYTHONDONTWRITEBYTECODE 'yes' # Prevent creation of __pycache__ folders
+set PYTHONDONTWRITEBYTECODE yes # Prevent creation of __pycache__ folders
 
-set COLOR1 (xrdb -query | grep "color1" | cut -f 2 | tail -1)
+##set COLOR1 (xrdb -query | grep "color1" | cut -f 2 | tail -1)
 
 
 
@@ -67,6 +67,7 @@ set COLOR1 (xrdb -query | grep "color1" | cut -f 2 | tail -1)
 
 ### "bat" as manpager
 set -x MANPAGER "sh -c 'col -bx | bat -l man -p'"
+set MANROFFOPT -c
 
 ### "vim" as manpager
 # set -x MANPAGER '/bin/bash -c "vim -MRn -c \"set buftype=nofile showtabline=0 ft=man ts=8 nomod nolist norelativenumber nonu noma\" -c \"normal L\" -c \"nmap q :qa<CR>\"</dev/tty <(col -b)"'
@@ -75,7 +76,7 @@ set -x MANPAGER "sh -c 'col -bx | bat -l man -p'"
 # set -x MANPAGER "nvim -c 'set ft=man' -"
 
 ### "less" as manpager
-# set -x MANPAGER "less"
+#set -x MANPAGER "less"
 
 
 
@@ -84,52 +85,52 @@ set -x MANPAGER "sh -c 'col -bx | bat -l man -p'"
 
 
 
-        alias q=exit
+alias q=exit
 # Alias for vi/vim/nvim/spacevim by calling utility script.
-        alias v="~/.dotfiles/utils/vicheck.sh"
-        alias vi="~/.dotfiles/utils/vicheck.sh"
-        alias vim="~/.dotfiles/utils/vicheck.sh"
-        alias lvim="~/.local/bin/lvim"
+alias v="~/.dotfiles/utils/vicheck.sh"
+alias vi="~/.dotfiles/utils/vicheck.sh"
+alias vim="~/.dotfiles/utils/vicheck.sh"
+alias lvim="~/.local/bin/lvim"
 # exa as ls
-        alias l='exa'
-	alias ls='exa'
-	alias la='exa -a'
-	alias ll='exa -l'
-	alias lla='exa -la'
+alias l='exa'
+alias ls='exa'
+alias la='exa -a'
+alias ll='exa -l'
+alias lla='exa -la'
 # Greps
-	alias grep='grep --colour=auto'
-	alias egrep='egrep --colour=auto'
-	alias fgrep='fgrep --colour=auto'
+alias grep='grep --colour=auto'
+alias egrep='egrep --colour=auto'
+alias fgrep='fgrep --colour=auto'
 # colorize grep and ls
-        alias grep &> /dev/null || alias grep="grep --color=auto"
+alias grep &>/dev/null || alias grep="grep --color=auto"
 
 # colorized ls - handy if exa not installed
 #	alias l='ls -p --color=auto -w $(($COLUMNS<120?$COLUMNS:120))'
 #	alias ll='ls -lp --color=auto'
 #	alias la='ls -ap --color=auto -w $((COLUMNS<120?$COLUMNS:120))'
 # Interactive move/copy/paste 
-	alias cp="cp -v -i"
-	alias mv="mv -v -i"
-	alias rm="rm -v -i"
+alias cp="cp -v -i"
+alias mv="mv -v -i"
+alias rm="rm -v -i"
 #       bat
-	alias cat="bat"
+alias cat="bat"
 # Pacman Aliases
-	alias paclean="sudo pacman -Qtdq | sudo pacman -Rns -"
-	alias pac-showorphans="pacman -Qqd | pacman -Rsu --print -"
+alias paclean="sudo pacman -Qtdq | sudo pacman -Rns -"
+alias pac-showorphans="pacman -Qqd | pacman -Rsu --print -"
 # so much easier to type than `cd ..`
-	alias cdd="cd .."
-	alias cddd="cd ../.."
-	alias cdddd="cd ../../.."
-        alias cddddd="cd ../../../.."
-	alias dfhh="du -h -d1 | sort -hr"
+alias cdd="cd .."
+alias cddd="cd ../.."
+alias cdddd="cd ../../.."
+alias cddddd="cd ../../../.."
+alias dfhh="du -h -d1 | sort -hr"
 
 # Take out the Trash
-        alias vtrash="gio list trash://"
-        alias emptytrash="gio trash --empty"
+alias vtrash="gio list trash://"
+alias emptytrash="gio trash --empty"
 
 # Memory stuffs
-alias df='df -h'                          # human-readable sizes
-alias free='free -m'                      # show sizes in MB
+alias df='df -h' # human-readable sizes
+alias free='free -m' # show sizes in MB
 
 # Stuff I never use...
 alias np='nano -w PKGBUILD'

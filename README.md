@@ -1,8 +1,103 @@
  # Dotfiles 2.0
 
+My dots are managed via RCM (rcup, rcdn).
+
+Some 'unique' (IMHO settings)
+
+* Use ~/Program/{foo} for Cargo, Ruby, Gems, Go
+* LunarVIM as default editor
+
+## Dependencies
+
+* Fish (shell)
+    - Tide prompt
+    - Fisher (optional - Fish Shell Plugin Manager)
+    - nnn.fish (Optional - Terminal File Manger)
+    - functions.fish (aliases and things)
+    
+* For shells and aliases:
+    - exa
+    - less
+    - bat (aka batcat)
+* bspwm
+    - bspwm
+    - rofi
+    - polybar
+    - picom
+
+Others:
+    - playerctl
+    - mpris
+    - slimpris (optional, for Logitech Media Server integrations)
+    - zscroll (for polybar mpris)
+
+* Wal 
+    - More eye candy to play with everythign else
+    - python-pywalfox (PyWal/Wal themes applied to Firefox)
+    
+* Others
+    - redshift
+    - lunarvim (requires neovim first!)
+    - LazyVim (https://www.lazyvim.org/ - A different vim build)
+    - xcape (optional; supplements the keyboard layouts)
+
+## Assumptions:
+    These should be fairly system agnostic, however the base is (currently) created from Archcraft's BSPWM configs
+
+~/.config/bspwm/   contains the configs not only from bspwm, but also:
+   - alacritty
+   - picom
+   - dunst
+   - themes/*/  <- these have Polybar and rofi settings
+   - xsettings.d
+
+## Configs include:
+
+* aliases for shells (bash, but can be called by others I think)
+    - Note: Fish Shell uses ~/.config/fish/functions.fish instead for aliases
+* bashrc
+* xprofile (swap caps/ctrl + xcape)
+
+* config
+    * fish
+    * bspwm 
+        sxhkdrc
+        picom.conf
+        polybar
+    * lvim
+        config.lua
+    * redshift.conf
+      Polybar
+        scripts
+            mpris redshift
+* local/bin/
+    vicheck.sh
+    pipes.sh
+    fzf.bash
+    colors.sh
+           
+
+### extras
+These are more system configs than user files.  Assume /etc unless otherwise stated.
+    xorg.conf.d/
+        90-touchpad.conf  (reference - setup natural scroll)
+    thinkfan-configs
+        sudo cp thinkfan.conf /etc/thinkfan.conf #fan curves
+        sudo cp modprobe-thinkfan.conf /etc/modprobe.d/thinkfan.conf #module with flags enabled
 
 
-## Unrelated 
+### Host Specific
+* host-Yoga
+    local/bin
+        autorotate.sh 
+        chargelimit.sh
+        nochargelimit.sh
+
+## Workflow
+* Added fisher, fzf, puffer fish, sponge to Fish
+* 
+
+## Notes, Comments, etc: 
 
 **Updates of Previous Notes**   
 
