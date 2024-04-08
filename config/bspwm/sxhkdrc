@@ -1,4 +1,4 @@
-## Copyright (C) 2020-2022 Aditya Shakya <adi1090x@gmail.com>
+## Copyright (C) 2020-2024 Aditya Shakya <adi1090x@gmail.com>
 ##
 ## Keybindings config for Archcraft's BSPWM
 
@@ -72,8 +72,8 @@ super + {f,e}
 	{firefox,geany}
 
 # Terminal Apps
-hyper + {r,h,b}
-	tilix -e {ranger,htop,btop}
+ctrl + alt + {v,r,h,b}
+	alacritty --config-file ~/.config/bspwm/alacritty/alacritty.toml -e {lvim,ranger,htop,btop}
 
 # Color Picker
 #super + p
@@ -85,7 +85,7 @@ ctrl + alt + m
 
 # Lockscreen
 ctrl + alt + l
-.   betterlockscreen --lock
+    betterlockscreen --lock
 
 ##---------- System Keys ----------##
 
@@ -112,10 +112,10 @@ alt + shift + Print
 # Brighness control
 XF86MonBrightness{Up,Down}
 	bspbrightness{ --inc, --dec}
-# 	
-# # Speaker Volume control
- XF86Audio{RaiseVolume,LowerVolume}
- 	bspvolume{ --inc, --dec}
+	
+# Speaker Volume control
+XF86Audio{RaiseVolume,LowerVolume}
+	bspvolume{ --inc, --dec}
 
 # Mic Volume control
 XF86Audio{Mute,MicMute}
@@ -128,7 +128,7 @@ XF86Audio{Next,Prev,Play,Stop}
 ##---------- Bspwm ----------##
 
 # Hide/Unhide Window
-hyper + h
+super + shift + h
 	bspwinmask
 
 # Close App
@@ -176,15 +176,15 @@ super + alt + {Left,Right,Up,Down}
 	bspc node -z {left 20 0,right -20 0,top 0 20,bottom 0 -20}
 
 # Split horizontal, vertical or cancel
-#super + {h,v,q}
-#	bspc node -p {east,south,cancel}
+super + {h,v,q}
+	bspc node -p {east,south,cancel}
 
 # Preselect the ratio
 super + ctrl + {1-9}
 	bspc node -o 0.{1-9}
 
 # Toggle Layout (Tiled/Monocle)
-super + space
+super + l
 	bspc desktop -l next
 
 # Toggle Fullscreen
@@ -192,7 +192,7 @@ super + f
     bspc node -t "~"fullscreen
 
 # Toggle beetwen floating & tiled
-super + l
+super + space
     bspc node -t "~"{floating,tiled}
 
 # Pseudo Tiled & tiled mode
