@@ -20,9 +20,10 @@ hyper + g
 # super + Return
 #	bspterm
 
+#super + Return
+#      tilix
 super + Return
-      tilix
-
+      wezterm
 
 # Terminal, Float xfce4-terminal
 super + shift + Return
