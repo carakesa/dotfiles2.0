@@ -1,4 +1,7 @@
- # Dotfiles 2.0
+# Note to self - need to pull in bspwmrc configs from Yoga for 9th Workspace (gaming)
+
+
+## Dotfiles 2.0
 
 My dots are managed via RCM (rcup, rcdn).
 
