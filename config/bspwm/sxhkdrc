@@ -136,6 +136,10 @@ super + shift + h
 super + {_,shift + }q
 	bspc node -{c,k}
 
+## Close with Ctrl+Shift+Q 
+ctrl + shift + {_,alt + }q 
+  bspc node -{c,k} 
+
 # kill window
 ctrl + alt + x
     xkill
