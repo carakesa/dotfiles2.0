@@ -23,7 +23,7 @@ end
 config.default_prog = { fish_path, "-l" }
 
 -- config.color_scheme = "Tokyo Night"
-config.color_scheme = "Hivacruz
+config.color_scheme = "Hivacruz"
 config.font = wezterm.font_with_fallback({
 	{ family = "Iosevka Nerd Font", scale = 1.0, weight = "Medium" },
 	{ family = "CaskaydiaCove Nerd Font", scale = 1.0 },
