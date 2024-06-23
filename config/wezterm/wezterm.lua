@@ -28,7 +28,7 @@ config.font = wezterm.font_with_fallback({
 	{ family = "IosevkaTermSlab Nerd Font Propo", scale = 1.0, weight = "Light" },
 	{ family = "JetBrains Mono Nerd Font", scale = 1.0 },
 })
-config.window_background_opacity = 0.50
+config.window_background_opacity = 0.90
 config.window_decorations = "RESIZE"
 config.window_close_confirmation = "AlwaysPrompt"
 config.scrollback_lines = 3000
