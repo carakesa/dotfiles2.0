@@ -8,7 +8,9 @@ My dots are managed via RCM (rcup, rcdn).
 Some 'unique' (IMHO settings)
 
 * Use ~/Program/{foo} for Cargo, Ruby, Gems, Go
-* LunarVIM as default editor
+* neovim w/ LazyVim config as default editor
+~~* LunarVIM as default editor~~
+
 
 ## Dependencies
 
@@ -19,30 +21,37 @@ Some 'unique' (IMHO settings)
     - functions.fish (aliases and things)
     
 * For shells and aliases:
-    - exa
+    - eza (was exa)
     - less
     - bat (aka batcat)
 * bspwm
     - bspwm
-    - rofi
-    - polybar
-    - picom
+    - rofi (menus)
+    - polybar (status bar, etc)
+    - picom (compositor)
+    - maim (for screenshots with bspwmscripts)
+    - dunst (notifications)
+    - xfce4-power-manager
+    - xfce-polkit
 
-Others:
+Optional, but for Polybar MPC controls
     - playerctl
     - mpris
     - slimpris (optional, for Logitech Media Server integrations)
     - zscroll (for polybar mpris)
 
+Optional for colorschemes
 * Wal 
     - More eye candy to play with everythign else
     - python-pywalfox (PyWal/Wal themes applied to Firefox)
-    
+
+Other Others
 * Others
     - redshift
-    - lunarvim (requires neovim first!)
+    - ~~lunarvim (requires neovim first!)~~
+    - neovim
     - LazyVim (https://www.lazyvim.org/ - A different vim build)
-    - xcape (optional; supplements the keyboard layouts)
+    - ~~xcape~~ (optional; supplements the keyboard layouts)
 
 ## Assumptions:
     These should be fairly system agnostic, however the base is (currently) created from Archcraft's BSPWM configs
@@ -59,7 +68,7 @@ Others:
 * aliases for shells (bash, but can be called by others I think)
     - Note: Fish Shell uses ~/.config/fish/functions.fish instead for aliases
 * bashrc
-* xprofile (swap caps/ctrl + xcape)
+* xprofile (swap caps/ctrl + ~~xcape~~)
 
 * config
     * fish
@@ -95,6 +104,10 @@ These are more system configs than user files.  Assume /etc unless otherwise sta
         autorotate.sh 
         chargelimit.sh
         nochargelimit.sh
+
+* host-legion
+*   conservationmode0.sh 
+*   conservationmode1.sh
 
 ## Workflow
 * Added fisher, fzf, puffer fish, sponge to Fish
