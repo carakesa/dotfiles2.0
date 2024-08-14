@@ -9,7 +9,7 @@
 
 local wezterm = require("wezterm")
 local act = wezterm.action
-
+wezterm.color_scheme = gruvbox
 -- local fish_path = "/opt/homebrew/bin/fish"
 local fish_path = "/usr/bin/fish"
 
