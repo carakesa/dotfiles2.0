@@ -1,18 +1,12 @@
-## Copyright (C) 2020-2024 Aditya Shakya <adi1090x@gmail.com>
-##
-## Keybindings config for Archcraft's BSPWM
+## Copyright (C) 2020-2024 carakesa
+#
+#  This file is a mess.  It works, but it's a mess
+#
+#
+## Keybindings config for Modified Archcraft BSPWM
 
-#### Can I use Print as a modifier? ####
-####  with xcape I can....           ####
-
-###  Hyper power!!! ###
-
-hyper + g
-  heroic &
-
-#hyper + t
-#  thunar &
-
+super + t
+  pcmanfm
 
 ##---------- Keybindings for bspwm ----------##
 
@@ -21,7 +15,6 @@ hyper + g
 #	bspterm
 
 #super + Return
-#      tilix
 super + Return
       wezterm
 
@@ -43,10 +36,6 @@ super + alt + Return
 
 super + {_,shift +}Return
   {alacritty, bspc rule -a \* -o state=floating && xfce4-terminal --drop-down}
-
-
-
-
 
 
 ##---------- Rofi Launcher & Menus ----------##
@@ -76,13 +65,9 @@ super + {f,e}
 ctrl + alt + {v,r,h,b}
 	alacritty --config-file ~/.config/bspwm/alacritty/alacritty.toml -e {lvim,ranger,htop,btop}
 
-# Color Picker
-#super + p
-#	bspcolorpicker
-
 # Music
-ctrl + alt + m
-	bspmusic
+#ctrl + alt + m
+#	bspmusic
 
 # Lockscreen
 ctrl + alt + l
@@ -193,7 +178,7 @@ super + l
 	bspc desktop -l next
 
 # Toggle Fullscreen
-super + f
+super + F11
     bspc node -t "~"fullscreen
 
 # Toggle beetwen floating & tiled
