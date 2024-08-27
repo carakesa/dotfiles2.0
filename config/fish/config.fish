@@ -136,4 +136,7 @@ alias free='free -m' # show sizes in MB
 alias np='nano -w PKGBUILD'
 alias more=less
 
+## PLEASE, I forgot the sudo 
+alias please="eval sudo (history -1 | string trim)"
+
 #end
