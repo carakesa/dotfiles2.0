@@ -34,6 +34,7 @@ config.window_decorations = "RESIZE"
 config.window_close_confirmation = "AlwaysPrompt"
 config.scrollback_lines = 3000
 config.default_workspace = "main"
+color_scheme = { '~/.config/wezterm/colors/custom.toml' }
 
 -- Dim inactive panes
 config.inactive_pane_hsb = {
