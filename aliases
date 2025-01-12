@@ -6,11 +6,11 @@
         alias vim="~/.dotfiles/util/vicheck.sh"
 
 # exa as ls
-        alias l='exa'
-	alias ls='exa'
-	alias la='exa -a'
-	alias ll='exa -l'
-	alias lla='exa -la'
+        alias l='eza'
+	alias ls='eza'
+	alias la='eza -a'
+	alias ll='eza -l'
+	alias lla='eza -la'
 # Greps
 	alias grep='grep --colour=auto'
 	alias egrep='egrep --colour=auto'
