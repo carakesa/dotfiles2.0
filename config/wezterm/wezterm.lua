@@ -29,7 +29,7 @@ config.font = wezterm.font_with_fallback({
 	{ family = "IosevkaTerm Nerd Font", scale = 1.0, weight = "Light" },
 	{ family = "JetBrains Mono Nerd Font", scale = 1.0 },
 })
-config.window_background_opacity = 0.60
+config.window_background_opacity = 0.80
 config.window_decorations = "RESIZE"
 config.window_close_confirmation = "AlwaysPrompt"
 config.scrollback_lines = 3000
